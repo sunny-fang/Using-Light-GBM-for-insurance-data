@@ -13,7 +13,7 @@ import seaborn as sns
 import os
 #%%
 # 讀資料&預處理
-os.chdir('D:\\研究所(2019.9.23)\\碩一上\\國泰大數據競賽\\刪變數後資料集')
+os.chdir('D:\\...')
 data = pd.read_csv('train6.csv', encoding = 'Big5')
 data['Y1'] = data['Y1'].replace(['Y', 'N'], [1, 0])
 #%%
@@ -139,7 +139,7 @@ probabilities = model.predict_proba(data_test6)
 buy_prob = probabilities[:,1]
 will_buy = buy_prob[buy_prob > 0.4]  
 #%%
-os.chdir('D:\\研究所(2019.9.23)\\碩一上\\國泰大數據競賽\\預測機率')
+os.chdir('D:\\...')
 type(buy_prob)
 dataframe = pd.DataFrame(buy_prob)
 dataframe.to_csv("lgbmclassifiertest04.csv",index=False,sep=',')
