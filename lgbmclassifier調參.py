@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns 
 import os
 #%%
-os.chdir('D:\\研究所(2019.9.23)\\碩一上\\國泰大數據競賽\\刪變數後資料集')
+os.chdir('D:\\...')
 X = pd.read_csv('train6.csv', encoding = 'Big5')
 X['Y1'] = X['Y1'].replace(['Y', 'N'], [1, 0])
 for c in X.columns:
@@ -118,7 +118,7 @@ will_buy = buy_prob[buy_prob > 0.4]
 # 將機率寫入csv檔中
 import os
 import pandas as pd
-os.chdir('C:\\Users\\方永騰\\Desktop\\研究所\\碩一上\\國泰大數據競賽\\預測機率')
+os.chdir('C:\\...')
 type(buy_prob)
 dataframe = pd.DataFrame(buy_prob)
 dataframe.to_csv("lgbmclassifiertest01.csv",index=False,sep=',')
