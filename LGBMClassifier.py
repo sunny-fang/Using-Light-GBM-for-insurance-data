@@ -12,7 +12,7 @@ from sklearn.metrics import confusion_matrix, classification_report, roc_auc_sco
 import matplotlib.pyplot as plt
 import seaborn as sns 
 import os
-os.chdir('C:\\Users\\方永騰\\Desktop\\研究所\\碩一上\\國泰大數據競賽\\刪變數後資料集')
+os.chdir('C:\\...')
 #%%
 data_train4 = pd.read_csv('train4.csv', encoding = 'Big5')
 data_train4 = data_train4.drop(['Unnamed: 0'], axis = 1)
