@@ -13,7 +13,7 @@ import seaborn as sns
 import os
 from sklearn import preprocessing
 #%%
-os.chdir('D:\\研究所(2019.9.23)\\碩一上\\國泰大數據競賽\\刪變數後資料集')
+os.chdir('D:\\...')
 data = pd.read_csv('train5-3.csv', encoding = 'Big5', float_precision = '10')
 # 去除ID欄位
 data = data.drop(['CUS_ID'], axis=1)
@@ -166,7 +166,7 @@ probabilities = model.predict_proba(test_data)
 buy_prob = probabilities[:,1]
 will_buy = buy_prob[buy_prob > 0.4]  
 #%%
-os.chdir('D:\\研究所(2019.9.23)\\碩一上\\國泰大數據競賽\\預測機率')
+os.chdir('D:\\...')
 type(buy_prob)
 dataframe = pd.DataFrame(buy_prob)
 dataframe.to_csv("lgbmclassifiertest07.csv",index=False,sep=',')
