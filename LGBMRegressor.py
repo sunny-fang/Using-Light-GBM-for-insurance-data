@@ -11,7 +11,7 @@ from sklearn.metrics import confusion_matrix, classification_report, roc_auc_sco
 import matplotlib.pyplot as plt
 import seaborn as sns 
 import os
-os.chdir('C:\\Users\\方永騰\\Desktop\\研究所\\碩一上\\國泰大數據競賽\\刪變數後資料集')
+os.chdir('C:\\...')
 
 #%%
 # LGBMClassifier
@@ -173,7 +173,7 @@ type(probabilities)
 buy_prob = probabilities[:,1]
 will_buy = buy_prob[buy_prob > 0.4]
 # 寫入csv檔中
-os.chdir('C:\\Users\\方永騰\\Desktop\\研究所\\碩一上\\國泰大數據競賽\\預測機率')
+os.chdir('C:\\...')
 type(buy_prob)
 dataframe = pd.DataFrame(buy_prob)
 dataframe.to_csv("lbgmclassifiertest01.csv",index=False,sep=',')
